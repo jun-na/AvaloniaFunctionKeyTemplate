@@ -13,14 +13,22 @@
         <vm:SecondViewModel />
     </Design.DataContext>
 
-    <StackPanel HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Spacing="16">
-        <TextBlock HorizontalAlignment="Center"
-                   FontSize="32"
-                   Text="SecondView" />
-        <Button HorizontalAlignment="Center"
-                Command="{Binding NavigateToFirstCommand}"
-                Content="FirstViewへ戻る" />
-    </StackPanel>
+    <Grid Margin="12" RowDefinitions="Auto,*">
+        <Border Classes="xp-header">
+            <TextBlock Classes="xp-title" Text="SecondView" />
+        </Border>
+
+        <Border Grid.Row="1"
+                Classes="xp-panel"
+                Margin="0,8,0,0">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="12">
+                <TextBlock Text="2番目のページ" />
+                <Button Classes="navigation"
+                        Command="{Binding NavigateToFirstCommand}"
+                        Content="FirstViewへ戻る" />
+            </StackPanel>
+        </Border>
+    </Grid>
 </UserControl>

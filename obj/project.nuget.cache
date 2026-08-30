@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kmBVpWeZrQU=",
+  "dgSpecHash": "fzPkcGP0Noo=",
   "success": true,
   "projectFilePath": "/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/AvaloniaFunctionKeyTemplate.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,6 @@
     "/Users/junpei/.nuget/packages/avalonia.native/12.1.1/avalonia.native.12.1.1.nupkg.sha512",
     "/Users/junpei/.nuget/packages/avalonia.remote.protocol/12.1.1/avalonia.remote.protocol.12.1.1.nupkg.sha512",
     "/Users/junpei/.nuget/packages/avalonia.skia/12.1.1/avalonia.skia.12.1.1.nupkg.sha512",
-    "/Users/junpei/.nuget/packages/avalonia.themes.fluent/12.1.1/avalonia.themes.fluent.12.1.1.nupkg.sha512",
     "/Users/junpei/.nuget/packages/avalonia.win32/12.1.1/avalonia.win32.12.1.1.nupkg.sha512",
     "/Users/junpei/.nuget/packages/avalonia.x11/12.1.1/avalonia.x11.12.1.1.nupkg.sha512",
     "/Users/junpei/.nuget/packages/avaloniaui.diagnosticssupport/2.2.3/avaloniaui.diagnosticssupport.2.2.3.nupkg.sha512",

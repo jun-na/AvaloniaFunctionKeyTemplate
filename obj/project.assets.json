@@ -253,22 +253,6 @@
           }
         }
       },
-      "Avalonia.Themes.Fluent/12.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Avalonia": "12.1.1"
-        },
-        "compile": {
-          "lib/net10.0/Avalonia.Themes.Fluent.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Avalonia.Themes.Fluent.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Avalonia.Win32/12.1.1": {
         "type": "package",
         "dependencies": {
@@ -1177,23 +1161,6 @@
         "lib/net8.0/Avalonia.Skia.xml"
       ]
     },
-    "Avalonia.Themes.Fluent/12.1.1": {
-      "sha512": "7vdtZsM9o8I8LpU9dyiB/Ah7WB8a5V3JHLsExe4T433ynn5x57F+DBskctZuNOxml8hbe1GmtNUNkBDsqSVKVg==",
-      "type": "package",
-      "path": "avalonia.themes.fluent/12.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "_manifest/cyclonedx/bom.cdx.json",
-        "avalonia.themes.fluent.12.1.1.nupkg.sha512",
-        "avalonia.themes.fluent.nuspec",
-        "lib/net10.0/Avalonia.Themes.Fluent.dll",
-        "lib/net10.0/Avalonia.Themes.Fluent.xml",
-        "lib/net8.0/Avalonia.Themes.Fluent.dll",
-        "lib/net8.0/Avalonia.Themes.Fluent.xml"
-      ]
-    },
     "Avalonia.Win32/12.1.1": {
       "sha512": "W7FKmHqoyI09dlCnrt0T9QSLk92qVJwXEHPwMI4zIM09Q6H5NzKfvwoadwxIc8S5gydvFypop3DfKX8x9SILug==",
       "type": "package",
@@ -1985,7 +1952,6 @@
       "Avalonia >= 12.1.1",
       "Avalonia.Desktop >= 12.1.1",
       "Avalonia.Fonts.Inter >= 12.1.1",
-      "Avalonia.Themes.Fluent >= 12.1.1",
       "AvaloniaUI.DiagnosticsSupport >= 2.2.3",
       "CommunityToolkit.Mvvm >= 8.4.2",
       "Dapper >= 2.1.79",
@@ -2047,10 +2013,6 @@
             "version": "[12.1.1, )"
           },
           "Avalonia.Fonts.Inter": {
-            "target": "Package",
-            "version": "[12.1.1, )"
-          },
-          "Avalonia.Themes.Fluent": {
             "target": "Package",
             "version": "[12.1.1, )"
           },

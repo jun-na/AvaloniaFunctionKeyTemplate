@@ -17,37 +17,46 @@
         <vm:FirstViewModel />
     </Design.DataContext>
 
-    <Grid Margin="24" RowDefinitions="Auto,Auto,*,Auto" RowSpacing="12">
-        <Grid ColumnDefinitions="*,Auto">
-            <TextBlock FontSize="24" Text="FirstView - SQLite ToDo" />
-            <Button Grid.Column="1"
-                    Command="{Binding NavigateToSecondCommand}"
-                    Content="SecondViewへ" />
-        </Grid>
+    <Grid Margin="12" RowDefinitions="Auto,Auto,*,Auto" RowSpacing="8">
+        <Border Classes="xp-header">
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Classes="xp-title" Text="FirstView - SQLite ToDo" />
+                <Button Grid.Column="1"
+                        Classes="navigation"
+                        Command="{Binding NavigateToSecondCommand}"
+                        Content="SecondViewへ" />
+            </Grid>
+        </Border>
 
-        <Grid Grid.Row="1" ColumnDefinitions="*,Auto,Auto" ColumnSpacing="8">
-            <TextBox Text="{Binding NewItemTitle}"
-                     PlaceholderText="項目を入力" />
-            <Button Grid.Column="1"
-                    Command="{Binding AddItemCommand}"
-                    Content="追加" />
-            <Button Grid.Column="2"
-                    Command="{Binding LoadItemsCommand}"
-                    Content="再読み込み" />
-        </Grid>
+        <Border Grid.Row="1" Classes="xp-panel">
+            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="6">
+                <TextBox Text="{Binding NewItemTitle}"
+                         PlaceholderText="項目を入力" />
+                <Button Grid.Column="1"
+                        Command="{Binding AddItemCommand}"
+                        Content="追加" />
+                <Button Grid.Column="2"
+                        Command="{Binding LoadItemsCommand}"
+                        Content="再読み込み" />
+            </Grid>
+        </Border>
 
-        <ListBox Grid.Row="2" ItemsSource="{Binding Items}">
-            <ListBox.ItemTemplate>
-                <DataTemplate x:DataType="data:TodoItemDto">
-                    <Grid ColumnDefinitions="60,*" Margin="4">
-                        <TextBlock Text="{Binding Id}" />
-                        <TextBlock Grid.Column="1" Text="{Binding Title}" />
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <Border Grid.Row="2" Classes="xp-panel" Padding="4">
+            <ListBox ItemsSource="{Binding Items}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="data:TodoItemDto">
+                        <Grid ColumnDefinitions="60,*" Margin="4">
+                            <TextBlock Text="{Binding Id}" />
+                            <TextBlock Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
 
-        <TextBlock Grid.Row="3" Text="{Binding StatusMessage}" />
+        <Border Grid.Row="3" Classes="xp-statusbar">
+            <TextBlock Text="{Binding StatusMessage}" />
+        </Border>
     </Grid>
 
 </UserControl>

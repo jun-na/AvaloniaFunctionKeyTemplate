@@ -9,7 +9,7 @@ build_property.AvaloniaNameGeneratorAttachDevTools = true
 build_property.AvaloniaUseCompiledBindingsByDefault = true
 build_property.AvaloniaMainPackageVersion = 12.1.1
 build_property.AvaloniaPreviewerNetCoreToolPath = /Users/junpei/.nuget/packages/avalonia/12.1.1/buildTransitive//../tools/net8.0/designer/Avalonia.Designer.HostApp.dll
-build_property.AvaloniaResourcePaths = /Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Assets/avalonia-logo.ico,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/App.axaml,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Pages/First/FirstView.axaml,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Pages/Second/SecondView.axaml,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Shell/MainWindow.axaml
+build_property.AvaloniaResourcePaths = /Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Assets/avalonia-logo.ico,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/App.axaml,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Pages/First/FirstView.axaml,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Pages/Second/SecondView.axaml,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Shell/MainWindow.axaml,/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Themes/AppTheme.axaml
 build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
 build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
 build_property.CsWinRTComponent = 
@@ -43,4 +43,7 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Shell/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/junpei/develop/MyProjects/AvaloniaFunctionKeyTemplate/Themes/AppTheme.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

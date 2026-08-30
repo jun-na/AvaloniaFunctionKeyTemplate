@@ -1,0 +1,460 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Styles.Resources>
+        <!-- Windows XP Luna風カラーパレット -->
+        <SolidColorBrush x:Key="XpDesktopBrush" Color="#ECE9D8" />
+        <SolidColorBrush x:Key="XpTextBrush" Color="#000000" />
+        <SolidColorBrush x:Key="XpDisabledTextBrush" Color="#ACA899" />
+        <SolidColorBrush x:Key="XpWindowBrush" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="XpBorderBrush" Color="#7F9DB9" />
+        <SolidColorBrush x:Key="XpFocusBorderBrush" Color="#316AC5" />
+        <SolidColorBrush x:Key="XpSelectionBrush" Color="#316AC5" />
+        <SolidColorBrush x:Key="XpSelectionTextBrush" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="XpHoverBrush" Color="#E8F2FF" />
+        <SolidColorBrush x:Key="XpPanelBorderBrush" Color="#B8B6A5" />
+        <SolidColorBrush x:Key="XpStatusBrush" Color="#F5F3E8" />
+        <SolidColorBrush x:Key="XpScrollTrackBrush" Color="#F1EFE2" />
+
+        <LinearGradientBrush x:Key="XpHeaderBrush"
+                             StartPoint="0%,0%"
+                             EndPoint="100%,0%">
+            <GradientStop Offset="0" Color="#0A246A" />
+            <GradientStop Offset="0.55" Color="#3A6EA5" />
+            <GradientStop Offset="1" Color="#A6CAF0" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="XpButtonBrush"
+                             StartPoint="0%,0%"
+                             EndPoint="0%,100%">
+            <GradientStop Offset="0" Color="#FFFFFF" />
+            <GradientStop Offset="0.45" Color="#F6F5EE" />
+            <GradientStop Offset="1" Color="#D6D2C2" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="XpButtonHoverBrush"
+                             StartPoint="0%,0%"
+                             EndPoint="0%,100%">
+            <GradientStop Offset="0" Color="#FFFDF2" />
+            <GradientStop Offset="0.5" Color="#FFF0BD" />
+            <GradientStop Offset="1" Color="#F2C76C" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="XpButtonPressedBrush"
+                             StartPoint="0%,0%"
+                             EndPoint="0%,100%">
+            <GradientStop Offset="0" Color="#D2E3F6" />
+            <GradientStop Offset="1" Color="#FFFFFF" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="XpNavigationBrush"
+                             StartPoint="0%,0%"
+                             EndPoint="0%,100%">
+            <GradientStop Offset="0" Color="#8DD25A" />
+            <GradientStop Offset="0.55" Color="#58A62D" />
+            <GradientStop Offset="1" Color="#2E7D1A" />
+        </LinearGradientBrush>
+
+        <!-- コンテンツ表示 -->
+        <ControlTheme x:Key="{x:Type ContentControl}"
+                      TargetType="ContentControl">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <ContentPresenter Content="{TemplateBinding Content}"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+
+        <ControlTheme x:Key="{x:Type UserControl}"
+                      TargetType="UserControl"
+                      BasedOn="{StaticResource {x:Type ContentControl}}" />
+
+        <!-- メインウィンドウ -->
+        <ControlTheme x:Key="{x:Type Window}"
+                      TargetType="Window">
+            <Setter Property="Background" Value="{StaticResource XpDesktopBrush}" />
+            <Setter Property="Foreground" Value="{StaticResource XpTextBrush}" />
+            <Setter Property="FontFamily" Value="Tahoma" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+
+        <!-- Windows XP風ボタン -->
+        <ControlTheme x:Key="{x:Type Button}"
+                      TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource XpButtonBrush}" />
+            <Setter Property="BorderBrush" Value="#003C74" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CornerRadius" Value="3" />
+            <Setter Property="Foreground" Value="{StaticResource XpTextBrush}" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="MinHeight" Value="25" />
+            <Setter Property="MinWidth" Value="75" />
+            <Setter Property="Padding" Value="10,3" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border x:Name="PART_ButtonBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}">
+                        <Border Margin="1"
+                                BorderBrush="#FFFFFF"
+                                BorderThickness="1,1,0,0"
+                                CornerRadius="2">
+                            <ContentPresenter x:Name="PART_ContentPresenter"
+                                              Content="{TemplateBinding Content}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              Padding="{TemplateBinding Padding}"
+                                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              RecognizesAccessKey="True"
+                                              TextElement.Foreground="{TemplateBinding Foreground}" />
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:pointerover /template/ Border#PART_ButtonBorder">
+                <Setter Property="Background" Value="{StaticResource XpButtonHoverBrush}" />
+                <Setter Property="BorderBrush" Value="#E59700" />
+            </Style>
+            <Style Selector="^:pressed /template/ Border#PART_ButtonBorder">
+                <Setter Property="Background" Value="{StaticResource XpButtonPressedBrush}" />
+                <Setter Property="BorderBrush" Value="#003C74" />
+            </Style>
+            <Style Selector="^:focus /template/ Border#PART_ButtonBorder">
+                <Setter Property="BorderThickness" Value="2" />
+            </Style>
+            <Style Selector="^:disabled">
+                <Setter Property="Foreground" Value="{StaticResource XpDisabledTextBrush}" />
+                <Setter Property="Opacity" Value="0.75" />
+            </Style>
+        </ControlTheme>
+
+        <!-- Windows XP風テキスト入力 -->
+        <ControlTheme x:Key="{x:Type TextBox}"
+                      TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource XpWindowBrush}" />
+            <Setter Property="BorderBrush" Value="{StaticResource XpBorderBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="CaretBrush" Value="{StaticResource XpTextBrush}" />
+            <Setter Property="Foreground" Value="{StaticResource XpTextBrush}" />
+            <Setter Property="PlaceholderForeground" Value="#808080" />
+            <Setter Property="SelectionBrush" Value="{StaticResource XpSelectionBrush}" />
+            <Setter Property="SelectionForegroundBrush" Value="{StaticResource XpSelectionTextBrush}" />
+            <Setter Property="MinHeight" Value="24" />
+            <Setter Property="Padding" Value="4,2" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border x:Name="PART_TextBoxBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                        <ScrollViewer x:Name="PART_ScrollViewer"
+                                      HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
+                                      VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}">
+                            <Grid>
+                                <TextBlock x:Name="PART_Placeholder"
+                                           IsVisible="False"
+                                           Foreground="{TemplateBinding PlaceholderForeground}"
+                                           Text="{TemplateBinding PlaceholderText}"
+                                           TextAlignment="{TemplateBinding TextAlignment}"
+                                           TextWrapping="{TemplateBinding TextWrapping}"
+                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                <TextPresenter x:Name="PART_TextPresenter"
+                                               CaretBlinkInterval="{TemplateBinding CaretBlinkInterval}"
+                                               CaretBrush="{TemplateBinding CaretBrush}"
+                                               CaretIndex="{TemplateBinding CaretIndex}"
+                                               LineHeight="{TemplateBinding LineHeight}"
+                                               LetterSpacing="{TemplateBinding LetterSpacing}"
+                                               PasswordChar="{TemplateBinding PasswordChar}"
+                                               RevealPassword="{TemplateBinding RevealPassword}"
+                                               SelectionBrush="{TemplateBinding SelectionBrush}"
+                                               SelectionEnd="{TemplateBinding SelectionEnd}"
+                                               SelectionForegroundBrush="{TemplateBinding SelectionForegroundBrush}"
+                                               SelectionStart="{TemplateBinding SelectionStart}"
+                                               Text="{TemplateBinding Text, Mode=TwoWay}"
+                                               TextAlignment="{TemplateBinding TextAlignment}"
+                                               TextWrapping="{TemplateBinding TextWrapping}"
+                                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Grid>
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:empty /template/ TextBlock#PART_Placeholder">
+                <Setter Property="IsVisible" Value="True" />
+            </Style>
+            <Style Selector="^:pointerover /template/ Border#PART_TextBoxBorder">
+                <Setter Property="BorderBrush" Value="#5A8AC6" />
+            </Style>
+            <Style Selector="^:focus /template/ Border#PART_TextBoxBorder">
+                <Setter Property="BorderBrush" Value="{StaticResource XpFocusBorderBrush}" />
+            </Style>
+            <Style Selector="^:disabled">
+                <Setter Property="Foreground" Value="{StaticResource XpDisabledTextBrush}" />
+                <Setter Property="Opacity" Value="0.75" />
+            </Style>
+        </ControlTheme>
+
+        <!-- スクロール領域 -->
+        <ControlTheme x:Key="XpScrollArrowButtonTheme"
+                      TargetType="RepeatButton">
+            <Setter Property="Background" Value="{StaticResource XpButtonBrush}" />
+            <Setter Property="BorderBrush" Value="#7F9DB9" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                          HorizontalContentAlignment="Center"
+                                          VerticalContentAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:pressed /template/ Border">
+                <Setter Property="Background" Value="{StaticResource XpButtonPressedBrush}" />
+            </Style>
+        </ControlTheme>
+
+        <ControlTheme x:Key="XpScrollTrackButtonTheme"
+                      TargetType="RepeatButton">
+            <Setter Property="Background" Value="{StaticResource XpScrollTrackBrush}" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}" />
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+
+        <ControlTheme x:Key="XpScrollThumbTheme"
+                      TargetType="Thumb">
+            <Setter Property="Background" Value="{StaticResource XpButtonBrush}" />
+            <Setter Property="BorderBrush" Value="#7F9DB9" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" />
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+
+        <ControlTheme x:Key="{x:Type ScrollBar}"
+                      TargetType="ScrollBar">
+            <Style Selector="^:horizontal">
+                <Setter Property="Height" Value="16" />
+                <Setter Property="Template">
+                    <ControlTemplate>
+                        <Grid ColumnDefinitions="16,*,16">
+                            <RepeatButton x:Name="PART_LineUpButton"
+                                          Grid.Column="0"
+                                          Focusable="False"
+                                          Theme="{StaticResource XpScrollArrowButtonTheme}">
+                                <Path Width="5" Height="8" Data="M 5 0 L 5 8 L 0 4 Z" Fill="#000000" />
+                            </RepeatButton>
+                            <Track Grid.Column="1"
+                                   Maximum="{TemplateBinding Maximum}"
+                                   Minimum="{TemplateBinding Minimum}"
+                                   Orientation="{TemplateBinding Orientation}"
+                                   ViewportSize="{TemplateBinding ViewportSize}"
+                                   Value="{TemplateBinding Value, Mode=TwoWay}">
+                                <Track.DecreaseButton>
+                                    <RepeatButton x:Name="PART_PageUpButton"
+                                                  Focusable="False"
+                                                  Theme="{StaticResource XpScrollTrackButtonTheme}" />
+                                </Track.DecreaseButton>
+                                <Track.IncreaseButton>
+                                    <RepeatButton x:Name="PART_PageDownButton"
+                                                  Focusable="False"
+                                                  Theme="{StaticResource XpScrollTrackButtonTheme}" />
+                                </Track.IncreaseButton>
+                                <Thumb Theme="{StaticResource XpScrollThumbTheme}" />
+                            </Track>
+                            <RepeatButton x:Name="PART_LineDownButton"
+                                          Grid.Column="2"
+                                          Focusable="False"
+                                          Theme="{StaticResource XpScrollArrowButtonTheme}">
+                                <Path Width="5" Height="8" Data="M 0 0 L 0 8 L 5 4 Z" Fill="#000000" />
+                            </RepeatButton>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter>
+            </Style>
+            <Style Selector="^:vertical">
+                <Setter Property="Width" Value="16" />
+                <Setter Property="Template">
+                    <ControlTemplate>
+                        <Grid RowDefinitions="16,*,16">
+                            <RepeatButton x:Name="PART_LineUpButton"
+                                          Grid.Row="0"
+                                          Focusable="False"
+                                          Theme="{StaticResource XpScrollArrowButtonTheme}">
+                                <Path Width="8" Height="5" Data="M 0 5 L 8 5 L 4 0 Z" Fill="#000000" />
+                            </RepeatButton>
+                            <Track Grid.Row="1"
+                                   Maximum="{TemplateBinding Maximum}"
+                                   Minimum="{TemplateBinding Minimum}"
+                                   Orientation="{TemplateBinding Orientation}"
+                                   ViewportSize="{TemplateBinding ViewportSize}"
+                                   Value="{TemplateBinding Value, Mode=TwoWay}">
+                                <Track.DecreaseButton>
+                                    <RepeatButton x:Name="PART_PageUpButton"
+                                                  Focusable="False"
+                                                  Theme="{StaticResource XpScrollTrackButtonTheme}" />
+                                </Track.DecreaseButton>
+                                <Track.IncreaseButton>
+                                    <RepeatButton x:Name="PART_PageDownButton"
+                                                  Focusable="False"
+                                                  Theme="{StaticResource XpScrollTrackButtonTheme}" />
+                                </Track.IncreaseButton>
+                                <Thumb Theme="{StaticResource XpScrollThumbTheme}" />
+                            </Track>
+                            <RepeatButton x:Name="PART_LineDownButton"
+                                          Grid.Row="2"
+                                          Focusable="False"
+                                          Theme="{StaticResource XpScrollArrowButtonTheme}">
+                                <Path Width="8" Height="5" Data="M 0 0 L 8 0 L 4 5 Z" Fill="#000000" />
+                            </RepeatButton>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter>
+            </Style>
+        </ControlTheme>
+
+        <ControlTheme x:Key="{x:Type ScrollViewer}"
+                      TargetType="ScrollViewer">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="*,Auto">
+                        <ScrollContentPresenter x:Name="PART_ContentPresenter"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}" />
+                        <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                   Grid.Row="1"
+                                   Orientation="Horizontal" />
+                        <ScrollBar x:Name="PART_VerticalScrollBar"
+                                   Grid.Column="1"
+                                   Orientation="Vertical" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+
+        <!-- Windows XP風リスト -->
+        <ControlTheme x:Key="{x:Type ListBoxItem}"
+                      TargetType="ListBoxItem">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{StaticResource XpTextBrush}" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Padding" Value="4,3" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border x:Name="PART_ItemBorder"
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:pointerover /template/ Border#PART_ItemBorder">
+                <Setter Property="Background" Value="{StaticResource XpHoverBrush}" />
+            </Style>
+            <Style Selector="^:selected">
+                <Setter Property="Background" Value="{StaticResource XpSelectionBrush}" />
+                <Setter Property="Foreground" Value="{StaticResource XpSelectionTextBrush}" />
+            </Style>
+        </ControlTheme>
+
+        <ControlTheme x:Key="{x:Type ListBox}"
+                      TargetType="ListBox">
+            <Setter Property="Background" Value="{StaticResource XpWindowBrush}" />
+            <Setter Property="BorderBrush" Value="{StaticResource XpBorderBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="2" />
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ScrollViewer x:Name="PART_ScrollViewer"
+                                      HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
+                                      VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}">
+                            <ItemsPresenter x:Name="PART_ItemsPresenter"
+                                            Margin="{TemplateBinding Padding}"
+                                            ItemsPanel="{TemplateBinding ItemsPanel}" />
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </ControlTheme>
+    </Styles.Resources>
+
+    <!-- アプリ全体の外観 -->
+    <Style Selector="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource XpTextBrush}" />
+        <Setter Property="FontFamily" Value="Tahoma" />
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
+    <Style Selector="Border.xp-header">
+        <Setter Property="Background" Value="{StaticResource XpHeaderBrush}" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="4,4,0,0" />
+        <Setter Property="Padding" Value="10,6" />
+    </Style>
+
+    <Style Selector="TextBlock.xp-title">
+        <Setter Property="Foreground" Value="#FFFFFF" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style Selector="Border.xp-panel">
+        <Setter Property="Background" Value="{StaticResource XpDesktopBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource XpPanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="8" />
+    </Style>
+
+    <Style Selector="Border.xp-statusbar">
+        <Setter Property="Background" Value="{StaticResource XpStatusBrush}" />
+        <Setter Property="BorderBrush" Value="#ACA899" />
+        <Setter Property="BorderThickness" Value="1,1,0,0" />
+        <Setter Property="Padding" Value="6,3" />
+    </Style>
+
+    <Style Selector="Button.navigation">
+        <Setter Property="Background" Value="{StaticResource XpNavigationBrush}" />
+        <Setter Property="BorderBrush" Value="#2E6B18" />
+        <Setter Property="Foreground" Value="#FFFFFF" />
+    </Style>
+</Styles>

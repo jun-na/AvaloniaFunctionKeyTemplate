@@ -11,7 +11,6 @@
           "Avalonia": "12.1.1",
           "Avalonia.Desktop": "12.1.1",
           "Avalonia.Fonts.Inter": "12.1.1",
-          "Avalonia.Themes.Fluent": "12.1.1",
           "AvaloniaUI.DiagnosticsSupport": "2.2.3",
           "CommunityToolkit.Mvvm": "8.4.2",
           "Dapper": "2.1.79",
@@ -191,17 +190,6 @@
         },
         "runtime": {
           "lib/net10.0/Avalonia.Skia.dll": {
-            "assemblyVersion": "12.1.1.0",
-            "fileVersion": "12.1.1.0"
-          }
-        }
-      },
-      "Avalonia.Themes.Fluent/12.1.1": {
-        "dependencies": {
-          "Avalonia": "12.1.1"
-        },
-        "runtime": {
-          "lib/net10.0/Avalonia.Themes.Fluent.dll": {
             "assemblyVersion": "12.1.1.0",
             "fileVersion": "12.1.1.0"
           }
@@ -786,13 +774,6 @@
       "sha512": "sha512-Q0jRMXb212RYIZNV7p6L/zWx8lyPck9dFFW+l86moeN4dNxHjPBdJS3nLdLvAd20Eno7JC4gwRa5Fewg52td8g==",
       "path": "avalonia.skia/12.1.1",
       "hashPath": "avalonia.skia.12.1.1.nupkg.sha512"
-    },
-    "Avalonia.Themes.Fluent/12.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7vdtZsM9o8I8LpU9dyiB/Ah7WB8a5V3JHLsExe4T433ynn5x57F+DBskctZuNOxml8hbe1GmtNUNkBDsqSVKVg==",
-      "path": "avalonia.themes.fluent/12.1.1",
-      "hashPath": "avalonia.themes.fluent.12.1.1.nupkg.sha512"
     },
     "Avalonia.Win32/12.1.1": {
       "type": "package",
