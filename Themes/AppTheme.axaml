@@ -457,4 +457,39 @@
         <Setter Property="BorderBrush" Value="#2E6B18" />
         <Setter Property="Foreground" Value="#FFFFFF" />
     </Style>
+
+    <Style Selector="Border.function-key-bar">
+        <Setter Property="Background" Value="#D4D0C8" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="0,1,0,0" />
+        <Setter Property="Padding" Value="4" />
+    </Style>
+
+    <Style Selector="Button.function-key">
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="MinHeight" Value="48" />
+        <Setter Property="Height" Value="48" />
+        <Setter Property="Margin" Value="2,0" />
+        <Setter Property="Padding" Value="2" />
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+    </Style>
+
+    <Style Selector="TextBlock.function-number">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style Selector="Border.function-separator">
+        <Setter Property="Background" Value="#ACA899" />
+        <Setter Property="Margin" Value="2,2" />
+    </Style>
+
+    <Style Selector="TextBlock.function-label">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="11" />
+    </Style>
 </Styles>

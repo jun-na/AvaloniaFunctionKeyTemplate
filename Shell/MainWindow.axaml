@@ -1,6 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:navigation="using:AvaloniaFunctionKeyTemplate.Shared.Navigation"
+        xmlns:shell="using:AvaloniaFunctionKeyTemplate.Shell"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
@@ -11,5 +12,8 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaFunctionKeyTemplate">
 
-    <ContentControl Content="{Binding CurrentView}" />
+    <Grid RowDefinitions="*,Auto">
+        <ContentControl Content="{Binding CurrentView}" />
+        <shell:FunctionKeyBar Grid.Row="1" />
+    </Grid>
 </Window>

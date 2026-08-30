@@ -1,0 +1,109 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="1000"
+             d:DesignHeight="58"
+             x:Class="AvaloniaFunctionKeyTemplate.Shell.FunctionKeyBar">
+
+    <Border Classes="function-key-bar">
+        <Grid ColumnDefinitions="*,*,*,*,14,*,*,*,*,14,*,*,*,*">
+            <Button Grid.Column="0" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F1" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="1" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F2" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="2" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F3" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="3" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F4" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="5" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F5" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="6" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F6" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="7" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F7" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="8" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F8" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="10" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F9" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="11" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F10" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="12" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F11" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+
+            <Button Grid.Column="13" Classes="function-key">
+                <Grid RowDefinitions="Auto,1,*">
+                    <TextBlock Classes="function-number" Text="F12" />
+                    <Border Grid.Row="1" Classes="function-separator" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                </Grid>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>
