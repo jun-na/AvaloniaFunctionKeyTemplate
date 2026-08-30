@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:AvaloniaFunctionKeyTemplate.Pages.Second"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="AvaloniaFunctionKeyTemplate.Pages.Second.SecondView"
+             x:DataType="vm:SecondViewModel">
+
+    <Design.DataContext>
+        <vm:SecondViewModel />
+    </Design.DataContext>
+
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Spacing="16">
+        <TextBlock HorizontalAlignment="Center"
+                   FontSize="32"
+                   Text="SecondView" />
+        <Button HorizontalAlignment="Center"
+                Command="{Binding NavigateToFirstCommand}"
+                Content="FirstViewへ戻る" />
+    </StackPanel>
+</UserControl>

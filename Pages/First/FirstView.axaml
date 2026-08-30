@@ -1,0 +1,53 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:AvaloniaFunctionKeyTemplate.Pages.First"
+             xmlns:data="using:AvaloniaFunctionKeyTemplate.Pages.First.Data"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="800"
+             d:DesignHeight="450"
+             x:Class="AvaloniaFunctionKeyTemplate.Pages.First.FirstView"
+             x:DataType="vm:FirstViewModel"
+             Loaded="OnLoaded">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:FirstViewModel />
+    </Design.DataContext>
+
+    <Grid Margin="24" RowDefinitions="Auto,Auto,*,Auto" RowSpacing="12">
+        <Grid ColumnDefinitions="*,Auto">
+            <TextBlock FontSize="24" Text="FirstView - SQLite ToDo" />
+            <Button Grid.Column="1"
+                    Command="{Binding NavigateToSecondCommand}"
+                    Content="SecondViewへ" />
+        </Grid>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,Auto,Auto" ColumnSpacing="8">
+            <TextBox Text="{Binding NewItemTitle}"
+                     PlaceholderText="項目を入力" />
+            <Button Grid.Column="1"
+                    Command="{Binding AddItemCommand}"
+                    Content="追加" />
+            <Button Grid.Column="2"
+                    Command="{Binding LoadItemsCommand}"
+                    Content="再読み込み" />
+        </Grid>
+
+        <ListBox Grid.Row="2" ItemsSource="{Binding Items}">
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="data:TodoItemDto">
+                    <Grid ColumnDefinitions="60,*" Margin="4">
+                        <TextBlock Text="{Binding Id}" />
+                        <TextBlock Grid.Column="1" Text="{Binding Title}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock Grid.Row="3" Text="{Binding StatusMessage}" />
+    </Grid>
+
+</UserControl>

@@ -23,9 +23,11 @@
 /Users/junpei/.nuget/packages/avalonia.x11/12.1.1/lib/net10.0/Avalonia.X11.dll
 /Users/junpei/.nuget/packages/avaloniaui.diagnosticssupport/2.2.3/lib/net10.0/AvaloniaUI.DiagnosticsSupport.Avalonia.dll
 /Users/junpei/.nuget/packages/communitytoolkit.mvvm/8.4.2/lib/net8.0/CommunityToolkit.Mvvm.dll
+/Users/junpei/.nuget/packages/dapper/2.1.79/lib/net10.0/Dapper.dll
 /Users/junpei/.nuget/packages/harfbuzzsharp/8.3.1.3/lib/net8.0/HarfBuzzSharp.dll
 /Users/junpei/.nuget/packages/microcom.runtime/0.11.6/lib/net8.0/MicroCom.Runtime.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.9/ref/net10.0/Microsoft.CSharp.dll
+/Users/junpei/.nuget/packages/microsoft.data.sqlite.core/10.0.11/lib/net8.0/Microsoft.Data.Sqlite.dll
 /Users/junpei/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/junpei/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/junpei/.nuget/packages/microsoft.io.recyclablememorystream/3.0.1/lib/net6.0/Microsoft.IO.RecyclableMemoryStream.dll
@@ -36,6 +38,9 @@
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.9/ref/net10.0/mscorlib.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.9/ref/net10.0/netstandard.dll
 /Users/junpei/.nuget/packages/skiasharp/3.119.4/ref/net10.0/SkiaSharp.dll
+/Users/junpei/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.12/lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll
+/Users/junpei/.nuget/packages/sqlitepclraw.core/2.1.12/lib/netstandard2.0/SQLitePCLRaw.core.dll
+/Users/junpei/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.12/lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.9/ref/net10.0/System.AppContext.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.9/ref/net10.0/System.Buffers.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/10.0.9/ref/net10.0/System.Collections.Concurrent.dll
