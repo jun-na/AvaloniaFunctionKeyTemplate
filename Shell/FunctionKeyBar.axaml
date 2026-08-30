@@ -1,107 +1,149 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:functionKeys="using:AvaloniaFunctionKeyTemplate.Shared.FunctionKeys"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              d:DesignWidth="1000"
              d:DesignHeight="58"
-             x:Class="AvaloniaFunctionKeyTemplate.Shell.FunctionKeyBar">
+             x:Class="AvaloniaFunctionKeyTemplate.Shell.FunctionKeyBar"
+             x:DataType="functionKeys:FunctionKeyService">
+
+    <Design.DataContext>
+        <functionKeys:FunctionKeyService />
+    </Design.DataContext>
 
     <Border Classes="function-key-bar">
         <Grid ColumnDefinitions="*,*,*,*,14,*,*,*,*,14,*,*,*,*">
-            <Button Grid.Column="0" Classes="function-key">
+            <Button Grid.Column="0"
+                    Classes="function-key"
+                    Command="{Binding F1.Command}"
+                    IsEnabled="{Binding F1.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F1" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F1.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="1" Classes="function-key">
+            <Button Grid.Column="1"
+                    Classes="function-key"
+                    Command="{Binding F2.Command}"
+                    IsEnabled="{Binding F2.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F2" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F2.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="2" Classes="function-key">
+            <Button Grid.Column="2"
+                    Classes="function-key"
+                    Command="{Binding F3.Command}"
+                    IsEnabled="{Binding F3.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F3" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F3.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="3" Classes="function-key">
+            <Button Grid.Column="3"
+                    Classes="function-key"
+                    Command="{Binding F4.Command}"
+                    IsEnabled="{Binding F4.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F4" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F4.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="5" Classes="function-key">
+            <Button Grid.Column="5"
+                    Classes="function-key"
+                    Command="{Binding F5.Command}"
+                    IsEnabled="{Binding F5.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F5" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F5.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="6" Classes="function-key">
+            <Button Grid.Column="6"
+                    Classes="function-key"
+                    Command="{Binding F6.Command}"
+                    IsEnabled="{Binding F6.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F6" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F6.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="7" Classes="function-key">
+            <Button Grid.Column="7"
+                    Classes="function-key"
+                    Command="{Binding F7.Command}"
+                    IsEnabled="{Binding F7.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F7" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F7.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="8" Classes="function-key">
+            <Button Grid.Column="8"
+                    Classes="function-key"
+                    Command="{Binding F8.Command}"
+                    IsEnabled="{Binding F8.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F8" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F8.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="10" Classes="function-key">
+            <Button Grid.Column="10"
+                    Classes="function-key"
+                    Command="{Binding F9.Command}"
+                    IsEnabled="{Binding F9.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F9" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F9.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="11" Classes="function-key">
+            <Button Grid.Column="11"
+                    Classes="function-key"
+                    Command="{Binding F10.Command}"
+                    IsEnabled="{Binding F10.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F10" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F10.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="12" Classes="function-key">
+            <Button Grid.Column="12"
+                    Classes="function-key"
+                    Command="{Binding F11.Command}"
+                    IsEnabled="{Binding F11.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F11" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F11.Label}" />
                 </Grid>
             </Button>
 
-            <Button Grid.Column="13" Classes="function-key">
+            <Button Grid.Column="13"
+                    Classes="function-key"
+                    Command="{Binding F12.Command}"
+                    IsEnabled="{Binding F12.IsAssigned}">
                 <Grid RowDefinitions="Auto,1,*">
                     <TextBlock Classes="function-number" Text="F12" />
                     <Border Grid.Row="1" Classes="function-separator" />
-                    <TextBlock Grid.Row="2" Classes="function-label" Text="" />
+                    <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F12.Label}" />
                 </Grid>
             </Button>
         </Grid>

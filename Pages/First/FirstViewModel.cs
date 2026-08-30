@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Avalonia.Input;
 using AvaloniaFunctionKeyTemplate.Pages.First.Data;
 using AvaloniaFunctionKeyTemplate.Shared;
+using AvaloniaFunctionKeyTemplate.Shared.FunctionKeys;
 using AvaloniaFunctionKeyTemplate.Shared.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -12,7 +15,7 @@ namespace AvaloniaFunctionKeyTemplate.Pages.First;
 /// <summary>
 /// FirstViewの状態、ToDo操作、SecondViewへの遷移を管理する。
 /// </summary>
-public partial class FirstViewModel : ViewModelBase
+public partial class FirstViewModel : ViewModelBase, IFunctionKeyProvider
 {
     private readonly TodoItemDao? _todoItemDao;
     private readonly NavigationService? _navigationService;
@@ -42,6 +45,15 @@ public partial class FirstViewModel : ViewModelBase
     /// 画面に表示するToDoの一覧。
     /// </summary>
     public ObservableCollection<TodoItemDto> Items { get; } = [];
+
+    /// <summary>
+    /// FirstViewで使用するF5の再読み込みとF12の追加処理を提供する。
+    /// </summary>
+    public IReadOnlyList<FunctionKeyBinding> FunctionKeys =>
+    [
+        new(Key.F5, "再読込", LoadItemsCommand),
+        new(Key.F12, "追加", AddItemCommand),
+    ];
 
     /// <summary>
     /// 新しく追加するToDoの入力値。

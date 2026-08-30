@@ -8,6 +8,7 @@ using AvaloniaFunctionKeyTemplate.Pages.First;
 using AvaloniaFunctionKeyTemplate.Pages.First.Data;
 using AvaloniaFunctionKeyTemplate.Pages.Second;
 using AvaloniaFunctionKeyTemplate.Shared.DependencyInjection;
+using AvaloniaFunctionKeyTemplate.Shared.FunctionKeys;
 using AvaloniaFunctionKeyTemplate.Shared.Navigation;
 using AvaloniaFunctionKeyTemplate.Shell;
 using Microsoft.Data.Sqlite;
@@ -61,7 +62,10 @@ public partial class App : Application
     private static void ConfigureServices(string connectionString)
     {
         ServiceContainer.AddSingleton(() => new TodoItemDao(connectionString));
-        ServiceContainer.AddSingleton(() => new NavigationService(CreateView));
+        ServiceContainer.AddSingleton(() => new FunctionKeyService());
+        ServiceContainer.AddSingleton(() => new NavigationService(
+            CreateView,
+            ServiceContainer.Resolve<FunctionKeyService>()));
 
         ServiceContainer.AddTransient(() => new FirstViewModel(
             ServiceContainer.Resolve<TodoItemDao>(),

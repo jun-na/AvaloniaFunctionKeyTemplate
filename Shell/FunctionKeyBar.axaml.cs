@@ -1,17 +1,24 @@
 using Avalonia.Controls;
+using AvaloniaFunctionKeyTemplate.Shared.DependencyInjection;
+using AvaloniaFunctionKeyTemplate.Shared.FunctionKeys;
 
 namespace AvaloniaFunctionKeyTemplate.Shell;
 
 /// <summary>
-/// Shell下部にF1からF12までの操作ガイドを表示する。
+/// Shell下部にF1からF12までのページ固有操作を表示する。
 /// </summary>
 public partial class FunctionKeyBar : UserControl
 {
     /// <summary>
-    /// ファンクションキーバーのXAMLを初期化する。
+    /// XAMLを初期化し、実行時のキー状態をDIコンテナから設定する。
     /// </summary>
     public FunctionKeyBar()
     {
         InitializeComponent();
+
+        if (!Design.IsDesignMode)
+        {
+            DataContext = ServiceContainer.Resolve<FunctionKeyService>();
+        }
     }
 }

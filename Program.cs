@@ -1,4 +1,6 @@
 ﻿using Avalonia;
+using Avalonia.Input;
+using AvaloniaUI.DiagnosticsSupport;
 using System;
 
 namespace AvaloniaFunctionKeyTemplate;
@@ -24,7 +26,10 @@ sealed class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
 #if DEBUG
-            .WithDeveloperTools()
+            .WithDeveloperTools(options =>
+                options.Gesture = new KeyGesture(
+                    Key.F12,
+                    KeyModifiers.Control | KeyModifiers.Shift))
 #endif
             .WithInterFont()
             .LogToTrace();

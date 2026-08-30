@@ -24,7 +24,7 @@
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Spacing="12">
-                <TextBlock Text="2番目のページ" />
+                <TextBlock Text="{Binding StatusMessage}" />
                 <Button Classes="navigation"
                         Command="{Binding NavigateToFirstCommand}"
                         Content="FirstViewへ戻る" />
