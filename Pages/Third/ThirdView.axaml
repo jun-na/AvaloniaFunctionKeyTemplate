@@ -49,10 +49,14 @@
                 <Border Grid.Row="0" Grid.Column="1" Classes="xp-panel">
                     <StackPanel Spacing="8">
                         <TextBlock Classes="gallery-section-title" Text="TextBox" />
+                        <TextBlock Text="入力後にEnterを押すと、次の入力欄へ移動" />
                         <TextBox Text="{Binding SampleText}"
-                                 PlaceholderText="文字を入力" />
+                                 PlaceholderText="1つ目の入力欄" />
+                        <TextBox PlaceholderText="2つ目の入力欄" />
+                        <TextBox PlaceholderText="3つ目の入力欄" />
                         <TextBox Text="読み取り専用"
-                                 IsReadOnly="True" />
+                                 IsReadOnly="True"
+                                 IsTabStop="False" />
                         <TextBox Text="無効状態"
                                  IsEnabled="False" />
                     </StackPanel>

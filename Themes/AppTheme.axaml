@@ -1,5 +1,6 @@
 <Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:behaviors="using:AvaloniaFunctionKeyTemplate.Shared.Behaviors">
 
     <Styles.Resources>
         <!-- Windows XP Luna風カラーパレット -->
@@ -150,6 +151,7 @@
         <!-- Windows XP風テキスト入力 -->
         <ControlTheme x:Key="{x:Type TextBox}"
                       TargetType="TextBox">
+            <Setter Property="behaviors:EnterMovesFocusBehavior.IsEnabled" Value="True" />
             <Setter Property="Background" Value="{StaticResource XpWindowBrush}" />
             <Setter Property="BorderBrush" Value="{StaticResource XpBorderBrush}" />
             <Setter Property="BorderThickness" Value="1" />
