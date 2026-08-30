@@ -10,7 +10,7 @@ namespace AvaloniaFunctionKeyTemplate.Pages.First;
 public partial class FirstView : UserControl
 {
     /// <summary>
-    /// XAMLを初期化し、実行時のみViewModelをDIコンテナから設定する。
+    /// XAMLを初期化し、実行時のみViewModelをPure.DIから設定する。
     /// 引数なしコンストラクタにすることでAvaloniaのView生成を妨げない。
     /// </summary>
     public FirstView()
@@ -19,7 +19,7 @@ public partial class FirstView : UserControl
 
         if (!Design.IsDesignMode)
         {
-            DataContext = ServiceContainer.Resolve<FirstViewModel>();
+            DataContext = AppServices.Resolve<FirstViewModel>();
         }
     }
 

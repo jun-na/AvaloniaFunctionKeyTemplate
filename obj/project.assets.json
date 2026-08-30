@@ -566,6 +566,9 @@
           }
         }
       },
+      "Pure.DI/2.5.3": {
+        "type": "package"
+      },
       "SkiaSharp/3.119.4": {
         "type": "package",
         "dependencies": {
@@ -852,6 +855,19 @@
         },
         "runtime": {
           "lib/net9.0/Tmds.DBus.Protocol.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Velopack/1.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Velopack.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Velopack.dll": {
             "related": ".xml"
           }
         }
@@ -1611,6 +1627,82 @@
         "microsoft.io.recyclablememorystream.nuspec"
       ]
     },
+    "Pure.DI/2.5.3": {
+      "sha512": "U1Fob1rwmOKvewu6Nso6V0nJzADUtxEjMLCYx8goKJ359hyNrEDQeVbjg5hRt8vMObRaNIUa1L2ZJAYAzMsGsA==",
+      "type": "package",
+      "path": "pure.di/2.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/roslyn4.3/cs/Pure.DI.Core.dll",
+        "analyzers/dotnet/roslyn4.3/cs/Pure.DI.Core.pdb",
+        "analyzers/dotnet/roslyn4.3/cs/Pure.DI.deps.json",
+        "analyzers/dotnet/roslyn4.3/cs/Pure.DI.dll",
+        "analyzers/dotnet/roslyn4.3/cs/Pure.DI.pdb",
+        "analyzers/dotnet/roslyn4.3/cs/ar/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/bn/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/de/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/es/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/fr/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/he/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/hi/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/id/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/it/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/ja/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/ko/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/pt/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/ru/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/th/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/vi/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.3/cs/zh/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/Pure.DI.Core.dll",
+        "analyzers/dotnet/roslyn4.8/cs/Pure.DI.Core.pdb",
+        "analyzers/dotnet/roslyn4.8/cs/Pure.DI.deps.json",
+        "analyzers/dotnet/roslyn4.8/cs/Pure.DI.dll",
+        "analyzers/dotnet/roslyn4.8/cs/Pure.DI.pdb",
+        "analyzers/dotnet/roslyn4.8/cs/ar/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/bn/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/de/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/es/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/fr/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/he/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/hi/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/id/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/it/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/ja/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/ko/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/pt/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/ru/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/th/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/vi/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn4.8/cs/zh/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/Pure.DI.Core.dll",
+        "analyzers/dotnet/roslyn5.6/cs/Pure.DI.Core.pdb",
+        "analyzers/dotnet/roslyn5.6/cs/Pure.DI.deps.json",
+        "analyzers/dotnet/roslyn5.6/cs/Pure.DI.dll",
+        "analyzers/dotnet/roslyn5.6/cs/Pure.DI.pdb",
+        "analyzers/dotnet/roslyn5.6/cs/ar/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/bn/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/de/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/es/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/fr/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/he/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/hi/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/id/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/it/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/ja/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/ko/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/pt/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/ru/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/th/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/vi/Pure.DI.Core.resources.dll",
+        "analyzers/dotnet/roslyn5.6/cs/zh/Pure.DI.Core.resources.dll",
+        "common/icon.png",
+        "pure.di.2.5.3.nupkg.sha512",
+        "pure.di.nuspec"
+      ]
+    },
     "SkiaSharp/3.119.4": {
       "sha512": "53NOSUZ1Us+91Sm0uCkIivh/k7jOowRErZT2sIWwPFN9mLUvdxnE6rS4sWo4255+Rd2MWUSF+j0NMZHD6Cke+Q==",
       "type": "package",
@@ -1945,6 +2037,29 @@
         "tmds.dbus.protocol.0.94.1.nupkg.sha512",
         "tmds.dbus.protocol.nuspec"
       ]
+    },
+    "Velopack/1.2.0": {
+      "sha512": "Rz67gJL619fSBS6omaSINUxyDuwhIxkm5mmubf7uLd5Qgi6LLKaKCha+QFP6n+Bw/UjA0vutnH4JQfYzn6ANtw==",
+      "type": "package",
+      "path": "velopack/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README_NUGET.md",
+        "Velopack_200.png",
+        "lib/net10.0/Velopack.dll",
+        "lib/net10.0/Velopack.xml",
+        "lib/net472/Velopack.dll",
+        "lib/net472/Velopack.xml",
+        "lib/net8.0/Velopack.dll",
+        "lib/net8.0/Velopack.xml",
+        "lib/net9.0/Velopack.dll",
+        "lib/net9.0/Velopack.xml",
+        "lib/netstandard2.0/Velopack.dll",
+        "lib/netstandard2.0/Velopack.xml",
+        "velopack.1.2.0.nupkg.sha512",
+        "velopack.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1955,7 +2070,9 @@
       "AvaloniaUI.DiagnosticsSupport >= 2.2.3",
       "CommunityToolkit.Mvvm >= 8.4.2",
       "Dapper >= 2.1.79",
-      "Microsoft.Data.Sqlite >= 10.0.11"
+      "Microsoft.Data.Sqlite >= 10.0.11",
+      "Pure.DI >= 2.5.3",
+      "Velopack >= 1.2.0"
     ]
   },
   "packageFolders": {
@@ -2031,6 +2148,16 @@
           "Microsoft.Data.Sqlite": {
             "target": "Package",
             "version": "[10.0.11, )"
+          },
+          "Pure.DI": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.5.3, )"
+          },
+          "Velopack": {
+            "target": "Package",
+            "version": "[1.2.0, )"
           }
         },
         "imports": [

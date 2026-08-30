@@ -9,7 +9,7 @@ namespace AvaloniaFunctionKeyTemplate.Pages.Third;
 public partial class ThirdView : UserControl
 {
     /// <summary>
-    /// XAMLを初期化し、実行時のみViewModelをDIコンテナから設定する。
+    /// XAMLを初期化し、実行時のみViewModelをPure.DIから設定する。
     /// 引数なしコンストラクタにすることでAvaloniaのView生成を妨げない。
     /// </summary>
     public ThirdView()
@@ -18,7 +18,7 @@ public partial class ThirdView : UserControl
 
         if (!Design.IsDesignMode)
         {
-            DataContext = ServiceContainer.Resolve<ThirdViewModel>();
+            DataContext = AppServices.Resolve<ThirdViewModel>();
         }
     }
 }

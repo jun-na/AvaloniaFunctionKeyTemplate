@@ -1,15 +1,9 @@
 using System;
 using System.IO;
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using AvaloniaFunctionKeyTemplate.Pages.First;
-using AvaloniaFunctionKeyTemplate.Pages.First.Data;
-using AvaloniaFunctionKeyTemplate.Pages.Second;
-using AvaloniaFunctionKeyTemplate.Pages.Third;
 using AvaloniaFunctionKeyTemplate.Shared.DependencyInjection;
-using AvaloniaFunctionKeyTemplate.Shared.FunctionKeys;
 using AvaloniaFunctionKeyTemplate.Shared.Navigation;
 using AvaloniaFunctionKeyTemplate.Shell;
 using Microsoft.Data.Sqlite;
@@ -30,7 +24,7 @@ public partial class App : Application
     }
 
     /// <summary>
-    /// デスクトップ用サービスを登録し、初期ページとメインウィンドウを生成する。
+    /// Pure.DIを初期化し、初期ページとメインウィンドウを生成する。
     /// </summary>
     public override void OnFrameworkInitializationCompleted()
     {
@@ -46,55 +40,13 @@ public partial class App : Application
                 DataSource = Path.Combine(databaseDirectory, "app.db"),
             }.ToString();
 
-            ConfigureServices(connectionString);
+            AppServices.Initialize(connectionString);
 
-            var navigationService = ServiceContainer.Resolve<NavigationService>();
+            var navigationService = AppServices.Resolve<NavigationService>();
             navigationService.NavigateTo(PageId.First);
-            desktop.MainWindow = ServiceContainer.Resolve<MainWindow>();
+            desktop.MainWindow = new MainWindow();
         }
 
         base.OnFrameworkInitializationCompleted();
     }
-
-    /// <summary>
-    /// サービスの生成方法とライフタイムを登録し、コンテナを確定する。
-    /// </summary>
-    /// <param name="connectionString">SQLiteへ接続するための接続文字列。</param>
-    private static void ConfigureServices(string connectionString)
-    {
-        ServiceContainer.AddSingleton(() => new TodoItemDao(connectionString));
-        ServiceContainer.AddSingleton(() => new FunctionKeyService());
-        ServiceContainer.AddSingleton(() => new NavigationService(
-            CreateView,
-            ServiceContainer.Resolve<FunctionKeyService>()));
-
-        ServiceContainer.AddTransient(() => new FirstViewModel(
-            ServiceContainer.Resolve<TodoItemDao>(),
-            ServiceContainer.Resolve<NavigationService>()));
-        ServiceContainer.AddTransient(() => new SecondViewModel(
-            ServiceContainer.Resolve<NavigationService>()));
-        ServiceContainer.AddTransient(() => new ThirdViewModel(
-            ServiceContainer.Resolve<NavigationService>()));
-
-        ServiceContainer.AddTransient(() => new FirstView());
-        ServiceContainer.AddTransient(() => new SecondView());
-        ServiceContainer.AddTransient(() => new ThirdView());
-        ServiceContainer.AddSingleton(() => new MainWindow());
-
-        ServiceContainer.Build();
-    }
-
-    /// <summary>
-    /// ページ識別子に対応するViewをコンテナから取得する。
-    /// Viewの対応関係を明示することでリフレクションを使わない。
-    /// </summary>
-    /// <param name="pageId">表示対象のページ識別子。</param>
-    /// <returns>新しく生成されたページのView。</returns>
-    private static Control CreateView(PageId pageId) => pageId switch
-    {
-        PageId.First => ServiceContainer.Resolve<FirstView>(),
-        PageId.Second => ServiceContainer.Resolve<SecondView>(),
-        PageId.Third => ServiceContainer.Resolve<ThirdView>(),
-        _ => throw new ArgumentOutOfRangeException(nameof(pageId), pageId, null),
-    };
 }

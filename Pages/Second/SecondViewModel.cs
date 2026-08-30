@@ -18,7 +18,7 @@ public partial class SecondViewModel : ViewModelBase, IFunctionKeyProvider
 
     /// <summary>
     /// XAMLデザイナーがプレビュー用インスタンスを生成するためのコンストラクタ。
-    /// 実行時にはDIコンテナが引数ありコンストラクタを使用する。
+    /// 実行時にはPure.DIが引数ありコンストラクタを使用する。
     /// </summary>
     public SecondViewModel()
     {

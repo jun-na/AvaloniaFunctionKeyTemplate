@@ -1,7 +1,10 @@
 ﻿using Avalonia;
 using Avalonia.Input;
+#if DEBUG
 using AvaloniaUI.DiagnosticsSupport;
+#endif
 using System;
+using Velopack;
 
 namespace AvaloniaFunctionKeyTemplate;
 
@@ -15,8 +18,11 @@ sealed class Program
     /// </summary>
     /// <param name="args">コマンドライン引数。</param>
     [STAThread]
-    public static void Main(string[] args) => BuildAvaloniaApp()
-        .StartWithClassicDesktopLifetime(args);
+    public static void Main(string[] args)
+    {
+        VelopackApp.Build().Run();
+        BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
+    }
 
     /// <summary>
     /// 実行時とXAMLデザイナーが共用するAvalonia設定を構築する。

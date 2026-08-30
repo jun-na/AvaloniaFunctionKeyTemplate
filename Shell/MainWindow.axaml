@@ -1,6 +1,5 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:navigation="using:AvaloniaFunctionKeyTemplate.Shared.Navigation"
         xmlns:shell="using:AvaloniaFunctionKeyTemplate.Shell"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,12 +7,30 @@
         d:DesignWidth="800"
         d:DesignHeight="450"
         x:Class="AvaloniaFunctionKeyTemplate.Shell.MainWindow"
-        x:DataType="navigation:NavigationService"
+        x:DataType="shell:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaFunctionKeyTemplate">
 
-    <Grid RowDefinitions="*,Auto">
-        <ContentControl Content="{Binding CurrentView}" />
-        <shell:FunctionKeyBar Grid.Row="1" />
+    <Grid RowDefinitions="Auto,*,Auto">
+        <Button Grid.Row="0"
+                Classes="update-notification"
+                IsEnabled="{Binding IsUpdateNotificationEnabled}"
+                IsVisible="{Binding IsUpdateNotificationVisible}"
+                Click="OnUpdateNotificationClick">
+            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="8">
+                <TextBlock FontSize="16"
+                           FontWeight="Bold"
+                           Text="!" />
+                <TextBlock Grid.Column="1"
+                           VerticalAlignment="Center"
+                           Text="{Binding Updates.NotificationMessage}" />
+                <TextBlock Grid.Column="2"
+                           VerticalAlignment="Center"
+                           Text="詳細 &gt;" />
+            </Grid>
+        </Button>
+
+        <ContentControl Grid.Row="1" Content="{Binding Navigation.CurrentView}" />
+        <shell:FunctionKeyBar Grid.Row="2" />
     </Grid>
 </Window>

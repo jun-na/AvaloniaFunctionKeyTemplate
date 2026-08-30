@@ -476,6 +476,51 @@
         <Setter Property="Foreground" Value="#FFFFFF" />
     </Style>
 
+    <Style Selector="Button.update-notification">
+        <Setter Property="Background" Value="#FFF4CE" />
+        <Setter Property="BorderBrush" Value="#C19C00" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="Foreground" Value="#3B2F00" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="Padding" Value="10,4" />
+    </Style>
+
+    <Style Selector="Button.update-notification:pointerover /template/ Border#PART_ButtonBorder">
+        <Setter Property="Background" Value="#FFE69C" />
+        <Setter Property="BorderBrush" Value="#9D7F00" />
+    </Style>
+
+    <Style Selector="Border.message-dialog-icon">
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <Style Selector="Border.message-dialog-icon.confirm">
+        <Setter Property="Background" Value="#316AC5" />
+    </Style>
+
+    <Style Selector="Border.message-dialog-icon.information">
+        <Setter Property="Background" Value="#3A6EA5" />
+    </Style>
+
+    <Style Selector="Border.message-dialog-icon.warning">
+        <Setter Property="Background" Value="#E6A700" />
+    </Style>
+
+    <Style Selector="Border.message-dialog-icon.error">
+        <Setter Property="Background" Value="#C42B1C" />
+    </Style>
+
+    <Style Selector="Border.message-dialog-icon TextBlock">
+        <Setter Property="Foreground" Value="#FFFFFF" />
+    </Style>
+
+    <Style Selector="Button.message-dialog-copy">
+        <Setter Property="MinWidth" Value="100" />
+    </Style>
+
     <Style Selector="Border.function-key-bar">
         <Setter Property="Background" Value="#D4D0C8" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />

@@ -10,7 +10,7 @@ namespace AvaloniaFunctionKeyTemplate.Shell;
 public partial class FunctionKeyBar : UserControl
 {
     /// <summary>
-    /// XAMLを初期化し、実行時のキー状態をDIコンテナから設定する。
+    /// XAMLを初期化し、実行時のキー状態をPure.DIから設定する。
     /// </summary>
     public FunctionKeyBar()
     {
@@ -18,7 +18,7 @@ public partial class FunctionKeyBar : UserControl
 
         if (!Design.IsDesignMode)
         {
-            DataContext = ServiceContainer.Resolve<FunctionKeyService>();
+            DataContext = AppServices.Resolve<FunctionKeyService>();
         }
     }
 }
