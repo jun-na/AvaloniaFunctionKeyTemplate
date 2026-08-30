@@ -19,7 +19,7 @@
                     Classes="function-key"
                     Command="{Binding F1.Command}"
                     IsEnabled="{Binding F1.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F1" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F1.Label}" />
@@ -30,7 +30,7 @@
                     Classes="function-key"
                     Command="{Binding F2.Command}"
                     IsEnabled="{Binding F2.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F2" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F2.Label}" />
@@ -41,7 +41,7 @@
                     Classes="function-key"
                     Command="{Binding F3.Command}"
                     IsEnabled="{Binding F3.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F3" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F3.Label}" />
@@ -52,7 +52,7 @@
                     Classes="function-key"
                     Command="{Binding F4.Command}"
                     IsEnabled="{Binding F4.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F4" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F4.Label}" />
@@ -63,7 +63,7 @@
                     Classes="function-key"
                     Command="{Binding F5.Command}"
                     IsEnabled="{Binding F5.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F5" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F5.Label}" />
@@ -74,7 +74,7 @@
                     Classes="function-key"
                     Command="{Binding F6.Command}"
                     IsEnabled="{Binding F6.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F6" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F6.Label}" />
@@ -85,7 +85,7 @@
                     Classes="function-key"
                     Command="{Binding F7.Command}"
                     IsEnabled="{Binding F7.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F7" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F7.Label}" />
@@ -96,7 +96,7 @@
                     Classes="function-key"
                     Command="{Binding F8.Command}"
                     IsEnabled="{Binding F8.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F8" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F8.Label}" />
@@ -107,7 +107,7 @@
                     Classes="function-key"
                     Command="{Binding F9.Command}"
                     IsEnabled="{Binding F9.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F9" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F9.Label}" />
@@ -118,7 +118,7 @@
                     Classes="function-key"
                     Command="{Binding F10.Command}"
                     IsEnabled="{Binding F10.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F10" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F10.Label}" />
@@ -129,7 +129,7 @@
                     Classes="function-key"
                     Command="{Binding F11.Command}"
                     IsEnabled="{Binding F11.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F11" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F11.Label}" />
@@ -140,7 +140,7 @@
                     Classes="function-key"
                     Command="{Binding F12.Command}"
                     IsEnabled="{Binding F12.IsAssigned}">
-                <Grid RowDefinitions="Auto,1,*">
+                <Grid RowDefinitions="Auto,2,*">
                     <TextBlock Classes="function-number" Text="F12" />
                     <Border Grid.Row="1" Classes="function-separator" />
                     <TextBlock Grid.Row="2" Classes="function-label" Text="{Binding F12.Label}" />

@@ -501,8 +501,10 @@
     </Style>
 
     <Style Selector="Border.function-separator">
-        <Setter Property="Background" Value="#ACA899" />
-        <Setter Property="Margin" Value="2,2" />
+        <Setter Property="Background" Value="#808080" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="BorderThickness" Value="0,0,0,1" />
+        <Setter Property="Margin" Value="2,0" />
     </Style>
 
     <Style Selector="TextBlock.function-label">
