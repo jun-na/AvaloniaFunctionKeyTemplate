@@ -1,0 +1,113 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:AvaloniaFunctionKeyTemplate.Pages.Third"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignWidth="900"
+             d:DesignHeight="600"
+             x:Class="AvaloniaFunctionKeyTemplate.Pages.Third.ThirdView"
+             x:DataType="vm:ThirdViewModel">
+
+    <Design.DataContext>
+        <vm:ThirdViewModel />
+    </Design.DataContext>
+
+    <Grid Margin="12" RowDefinitions="Auto,*,Auto" RowSpacing="8">
+        <Border Classes="xp-header">
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Classes="xp-title" Text="ThirdView - Control Gallery" />
+                <Button Grid.Column="1"
+                        Classes="navigation"
+                        Command="{Binding NavigateToFirstCommand}"
+                        Content="FirstViewへ戻る" />
+            </Grid>
+        </Border>
+
+        <ScrollViewer Grid.Row="1"
+                      HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto">
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="Auto,Auto"
+                  ColumnSpacing="8"
+                  RowSpacing="8">
+                <Border Grid.Row="0" Grid.Column="0" Classes="xp-panel">
+                    <StackPanel Spacing="8">
+                        <TextBlock Classes="gallery-section-title" Text="Button" />
+                        <WrapPanel ItemSpacing="8" LineSpacing="8">
+                            <Button Command="{Binding RunSampleCommand}"
+                                    Content="標準ボタン" />
+                            <Button Classes="navigation"
+                                    Command="{Binding RunSampleCommand}"
+                                    Content="強調ボタン" />
+                            <Button IsEnabled="False" Content="無効ボタン" />
+                        </WrapPanel>
+                        <TextBlock Text="通常・強調・無効状態" />
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1" Classes="xp-panel">
+                    <StackPanel Spacing="8">
+                        <TextBlock Classes="gallery-section-title" Text="TextBox" />
+                        <TextBox Text="{Binding SampleText}"
+                                 PlaceholderText="文字を入力" />
+                        <TextBox Text="読み取り専用"
+                                 IsReadOnly="True" />
+                        <TextBox Text="無効状態"
+                                 IsEnabled="False" />
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0" Classes="xp-panel">
+                    <StackPanel Spacing="8">
+                        <TextBlock Classes="gallery-section-title" Text="ListBox" />
+                        <ListBox Height="170"
+                                 ItemsSource="{Binding SampleItems}"
+                                 SelectedIndex="0" />
+                        <TextBlock Text="選択・ホバー・スクロール状態" />
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" Classes="xp-panel">
+                    <StackPanel Spacing="10">
+                        <TextBlock Classes="gallery-section-title" Text="ScrollBar / Colors" />
+                        <TextBlock Text="水平スクロールバー" />
+                        <ScrollBar Minimum="0"
+                                   Maximum="100"
+                                   Value="35"
+                                   Orientation="Horizontal" />
+
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                            <StackPanel Spacing="5">
+                                <Border Height="26" Background="#ECE9D8" BorderBrush="#ACA899" BorderThickness="1">
+                                    <TextBlock Margin="6,0" VerticalAlignment="Center" Text="デスクトップ" />
+                                </Border>
+                                <Border Height="26" Background="#316AC5">
+                                    <TextBlock Margin="6,0" VerticalAlignment="Center" Foreground="#FFFFFF" Text="選択色" />
+                                </Border>
+                                <Border Height="26" Background="#3A6EA5">
+                                    <TextBlock Margin="6,0" VerticalAlignment="Center" Foreground="#FFFFFF" Text="タイトル色" />
+                                </Border>
+                            </StackPanel>
+
+                            <ScrollBar Grid.Column="1"
+                                       Height="100"
+                                       Minimum="0"
+                                       Maximum="100"
+                                       Value="60"
+                                       Orientation="Vertical" />
+                        </Grid>
+
+                        <Button HorizontalAlignment="Left"
+                                Command="{Binding RunSampleCommand}"
+                                Content="実行" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </ScrollViewer>
+
+        <Border Grid.Row="2" Classes="xp-statusbar">
+            <TextBlock Text="{Binding StatusMessage}" />
+        </Border>
+    </Grid>
+</UserControl>

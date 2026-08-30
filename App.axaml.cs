@@ -7,6 +7,7 @@ using Avalonia.Markup.Xaml;
 using AvaloniaFunctionKeyTemplate.Pages.First;
 using AvaloniaFunctionKeyTemplate.Pages.First.Data;
 using AvaloniaFunctionKeyTemplate.Pages.Second;
+using AvaloniaFunctionKeyTemplate.Pages.Third;
 using AvaloniaFunctionKeyTemplate.Shared.DependencyInjection;
 using AvaloniaFunctionKeyTemplate.Shared.FunctionKeys;
 using AvaloniaFunctionKeyTemplate.Shared.Navigation;
@@ -72,9 +73,12 @@ public partial class App : Application
             ServiceContainer.Resolve<NavigationService>()));
         ServiceContainer.AddTransient(() => new SecondViewModel(
             ServiceContainer.Resolve<NavigationService>()));
+        ServiceContainer.AddTransient(() => new ThirdViewModel(
+            ServiceContainer.Resolve<NavigationService>()));
 
         ServiceContainer.AddTransient(() => new FirstView());
         ServiceContainer.AddTransient(() => new SecondView());
+        ServiceContainer.AddTransient(() => new ThirdView());
         ServiceContainer.AddSingleton(() => new MainWindow());
 
         ServiceContainer.Build();
@@ -90,6 +94,7 @@ public partial class App : Application
     {
         PageId.First => ServiceContainer.Resolve<FirstView>(),
         PageId.Second => ServiceContainer.Resolve<SecondView>(),
+        PageId.Third => ServiceContainer.Resolve<ThirdView>(),
         _ => throw new ArgumentOutOfRangeException(nameof(pageId), pageId, null),
     };
 }

@@ -10,6 +10,7 @@
         <SolidColorBrush x:Key="XpBorderBrush" Color="#7F9DB9" />
         <SolidColorBrush x:Key="XpFocusBorderBrush" Color="#316AC5" />
         <SolidColorBrush x:Key="XpSelectionBrush" Color="#316AC5" />
+        <SolidColorBrush x:Key="XpSelectionHoverBrush" Color="#194F9E" />
         <SolidColorBrush x:Key="XpSelectionTextBrush" Color="#FFFFFF" />
         <SolidColorBrush x:Key="XpHoverBrush" Color="#E8F2FF" />
         <SolidColorBrush x:Key="XpPanelBorderBrush" Color="#B8B6A5" />
@@ -263,10 +264,10 @@
         <ControlTheme x:Key="{x:Type ScrollBar}"
                       TargetType="ScrollBar">
             <Style Selector="^:horizontal">
-                <Setter Property="Height" Value="16" />
+                <Setter Property="Height" Value="18" />
                 <Setter Property="Template">
                     <ControlTemplate>
-                        <Grid ColumnDefinitions="16,*,16">
+                        <Grid ColumnDefinitions="18,*,18">
                             <RepeatButton x:Name="PART_LineUpButton"
                                           Grid.Column="0"
                                           Focusable="False"
@@ -289,7 +290,8 @@
                                                   Focusable="False"
                                                   Theme="{StaticResource XpScrollTrackButtonTheme}" />
                                 </Track.IncreaseButton>
-                                <Thumb Theme="{StaticResource XpScrollThumbTheme}" />
+                                <Thumb MinWidth="30"
+                                       Theme="{StaticResource XpScrollThumbTheme}" />
                             </Track>
                             <RepeatButton x:Name="PART_LineDownButton"
                                           Grid.Column="2"
@@ -302,10 +304,10 @@
                 </Setter>
             </Style>
             <Style Selector="^:vertical">
-                <Setter Property="Width" Value="16" />
+                <Setter Property="Width" Value="18" />
                 <Setter Property="Template">
                     <ControlTemplate>
-                        <Grid RowDefinitions="16,*,16">
+                        <Grid RowDefinitions="18,*,18">
                             <RepeatButton x:Name="PART_LineUpButton"
                                           Grid.Row="0"
                                           Focusable="False"
@@ -328,7 +330,8 @@
                                                   Focusable="False"
                                                   Theme="{StaticResource XpScrollTrackButtonTheme}" />
                                 </Track.IncreaseButton>
-                                <Thumb Theme="{StaticResource XpScrollThumbTheme}" />
+                                <Thumb MinHeight="30"
+                                       Theme="{StaticResource XpScrollThumbTheme}" />
                             </Track>
                             <RepeatButton x:Name="PART_LineDownButton"
                                           Grid.Row="2"
@@ -389,6 +392,9 @@
                 <Setter Property="Background" Value="{StaticResource XpSelectionBrush}" />
                 <Setter Property="Foreground" Value="{StaticResource XpSelectionTextBrush}" />
             </Style>
+            <Style Selector="^:selected:pointerover /template/ Border#PART_ItemBorder">
+                <Setter Property="Background" Value="{StaticResource XpSelectionHoverBrush}" />
+            </Style>
         </ControlTheme>
 
         <ControlTheme x:Key="{x:Type ListBox}"
@@ -424,6 +430,10 @@
         <Setter Property="FontSize" Value="12" />
     </Style>
 
+    <Style Selector="ListBoxItem:selected TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource XpSelectionTextBrush}" />
+    </Style>
+
     <Style Selector="Border.xp-header">
         <Setter Property="Background" Value="{StaticResource XpHeaderBrush}" />
         <Setter Property="BorderBrush" Value="#FFFFFF" />
@@ -435,6 +445,12 @@
     <Style Selector="TextBlock.xp-title">
         <Setter Property="Foreground" Value="#FFFFFF" />
         <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style Selector="TextBlock.gallery-section-title">
+        <Setter Property="Foreground" Value="#003C74" />
+        <Setter Property="FontSize" Value="13" />
         <Setter Property="FontWeight" Value="Bold" />
     </Style>
 

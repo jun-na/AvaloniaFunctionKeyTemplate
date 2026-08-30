@@ -14,4 +14,9 @@ public enum PageId
     /// 遷移確認用の2番目のページ。
     /// </summary>
     Second,
+
+    /// <summary>
+    /// 自作テーマのコントロールギャラリーを表示するページ。
+    /// </summary>
+    Third,
 }

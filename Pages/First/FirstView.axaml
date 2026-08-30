@@ -19,9 +19,12 @@
 
     <Grid Margin="12" RowDefinitions="Auto,Auto,*,Auto" RowSpacing="8">
         <Border Classes="xp-header">
-            <Grid ColumnDefinitions="*,Auto">
+            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="6">
                 <TextBlock Classes="xp-title" Text="FirstView - SQLite ToDo" />
                 <Button Grid.Column="1"
+                        Command="{Binding NavigateToThirdCommand}"
+                        Content="コントロール一覧" />
+                <Button Grid.Column="2"
                         Classes="navigation"
                         Command="{Binding NavigateToSecondCommand}"
                         Content="SecondViewへ" />

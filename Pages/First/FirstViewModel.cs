@@ -13,7 +13,7 @@ using CommunityToolkit.Mvvm.Input;
 namespace AvaloniaFunctionKeyTemplate.Pages.First;
 
 /// <summary>
-/// FirstViewの状態、ToDo操作、SecondViewへの遷移を管理する。
+/// FirstViewの状態、ToDo操作、各ページへの遷移を管理する。
 /// </summary>
 public partial class FirstViewModel : ViewModelBase, IFunctionKeyProvider
 {
@@ -47,10 +47,11 @@ public partial class FirstViewModel : ViewModelBase, IFunctionKeyProvider
     public ObservableCollection<TodoItemDto> Items { get; } = [];
 
     /// <summary>
-    /// FirstViewで使用するF5の再読み込みとF12の追加処理を提供する。
+    /// FirstViewで使用するF1のギャラリー遷移、F5の再読み込み、F12の追加処理を提供する。
     /// </summary>
     public IReadOnlyList<FunctionKeyBinding> FunctionKeys =>
     [
+        new(Key.F1, "ギャラリー", NavigateToThirdCommand),
         new(Key.F5, "再読込", LoadItemsCommand),
         new(Key.F12, "追加", AddItemCommand),
     ];
@@ -91,6 +92,12 @@ public partial class FirstViewModel : ViewModelBase, IFunctionKeyProvider
     /// </summary>
     [RelayCommand(CanExecute = nameof(CanNavigateToSecond))]
     private void NavigateToSecond() => _navigationService?.NavigateTo(PageId.Second);
+
+    /// <summary>
+    /// 表示ページをコントロールギャラリーのThirdViewへ切り替える。
+    /// </summary>
+    [RelayCommand(CanExecute = nameof(CanNavigateToSecond))]
+    private void NavigateToThird() => _navigationService?.NavigateTo(PageId.Third);
 
     /// <summary>
     /// テーブルを初期化し、SQLiteからToDo一覧を再取得する。
