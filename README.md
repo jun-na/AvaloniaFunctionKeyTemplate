@@ -2,7 +2,7 @@
 
 Avaloniaで業務用デスクトップアプリを作るためのテンプレート。
 
-画面単位でView、ViewModel、画面固有処理をまとめる構成、ファンクションキーバー、画面遷移、Pure.DI、DapperとSQLiteによるデータアクセスを含む。UIはWindows XP風。
+画面単位でView、ViewModel、画面固有処理をまとめる構成、ファンクションキーバー、画面遷移、Pure.DI、DapperとSQLiteによるデータアクセスを含む。UIはFluentテーマをベースにしたWindows XP風。
 
 ## 主な機能
 
@@ -12,7 +12,7 @@ Avaloniaで業務用デスクトップアプリを作るためのテンプレー
 - 画面ごとに表示と処理を切り替えるF1〜F12ファンクションキーバー
 - SingletonとTransientに対応したコンパイル時コード生成DI（Pure.DI）
 - DapperとSQLiteを使ったDAO / DTOサンプル
-- Windows XP風の独自コントロールテーマ
+- FluentテーマをベースにしたWindows XP風の独自コントロールテーマ
 - 単一行TextBoxでEnterを押したときのTab移動
 - Confirm、Info、Warning、Errorに対応した共通メッセージダイアログ
 - GitHub Releasesを使った起動時の自動更新確認
@@ -47,7 +47,7 @@ Shared/                     複数画面で共有する基盤
   Navigation/               画面遷移基盤
   Updates/                  自動更新基盤
 Shell/                      MainWindowとファンクションキーバー
-Themes/                     Windows XP風テーマ
+Themes/                     FluentベースのWindows XP風テーマ
 ```
 
 ## テンプレートとして使う

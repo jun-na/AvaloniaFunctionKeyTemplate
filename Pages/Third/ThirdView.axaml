@@ -28,7 +28,7 @@
                       HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto">
             <Grid ColumnDefinitions="*,*"
-                  RowDefinitions="Auto,Auto"
+                  RowDefinitions="Auto,Auto,Auto"
                   ColumnSpacing="8"
                   RowSpacing="8">
                 <Border Grid.Row="0" Grid.Column="0" Classes="xp-panel">
@@ -105,6 +105,29 @@
                         <Button HorizontalAlignment="Left"
                                 Command="{Binding RunSampleCommand}"
                                 Content="実行" />
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        Classes="xp-panel">
+                    <StackPanel Spacing="8">
+                        <TextBlock Classes="gallery-section-title" Text="TabControl" />
+                        <TabControl SelectedIndex="0">
+                            <TabItem Header="概要">
+                                <TextBlock Margin="12"
+                                           Text="Fluentテーマを使用した標準のタブコントロール" />
+                            </TabItem>
+                            <TabItem Header="入力例">
+                                <StackPanel Margin="12" Spacing="8">
+                                    <TextBlock Text="タブ内の入力コントロール" />
+                                    <TextBox PlaceholderText="テキストを入力" />
+                                </StackPanel>
+                            </TabItem>
+                            <TabItem Header="無効状態" IsEnabled="False">
+                                <TextBlock Margin="12" Text="無効なタブ" />
+                            </TabItem>
+                        </TabControl>
                     </StackPanel>
                 </Border>
             </Grid>
